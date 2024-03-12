@@ -1,0 +1,25 @@
+List<List<int>> separarParesImpares(List<int> listaNumeros) {
+  List<int> pares = [];
+  List<int> impares = [];
+
+  for (int numero in listaNumeros) {
+    if (numero % 2 == 0) {
+      pares.add(numero);
+    } else {
+      impares.add(numero);
+    }
+  }
+
+  pares.sort();
+  impares.sort();
+
+  return [pares, impares];
+}
+
+void main() {
+  List<int> listaNumeros = [1, 50, 3, 4, 5, 90, 17];
+  List<List<int>> resultado = separarParesImpares(listaNumeros);
+
+  print('Pares: ${resultado[0]}');
+  print('Impares: ${resultado[1]}');
+}

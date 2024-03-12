@@ -1,0 +1,16 @@
+class Persona {
+  String nombre;
+  int edad;
+  String genero;
+
+  Persona(this.nombre, this.edad, this.genero);
+
+  presentarse() {
+    print('Hola, soy $nombre, tengo $edad años y soy $genero.');
+  }
+}
+
+void main() {
+  Persona persona1 = Persona('Juan Pérez', 25, 'Masculino');
+  persona1.presentarse();
+}

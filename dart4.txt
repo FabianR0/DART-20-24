@@ -1,0 +1,23 @@
+List<String> ordenarAlfanumerico(List<String> listaCadenas) {
+  listaCadenas.sort((a, b) {
+    for (int i = 0; i < a.length && i < b.length; i++) {
+      int codigoA = a.codeUnitAt(i);
+      int codigoB = b.codeUnitAt(i);
+
+      if (codigoA != codigoB) {
+        return codigoA.compareTo(codigoB);
+      }
+    }
+
+    return a.length.compareTo(b.length);
+  });
+
+  return listaCadenas;
+}
+
+void main() {
+  List<String> listaCadenas = ['manzana', '021laptop', 'zapato', '&2top'];
+  List<String> resultado = ordenarAlfanumerico(listaCadenas);
+
+  print('Lista ordenada: $resultado');
+}

@@ -1,0 +1,15 @@
+bool esPalindromo(String texto) {
+  String textoMinuscula = texto.toLowerCase().replaceAll(' ', '');
+  String textoAlReves = textoMinuscula.split('').reversed.join('');
+  return textoMinuscula == textoAlReves;
+}
+
+void main() {
+  String texto1 = 'ana';
+  String texto2 = 'anita lava la tina';
+  String texto3 = 'no es palindromo';
+
+  print('${texto1} es palindromo: ${esPalindromo(texto1)}');
+  print('${texto2} es palindromo: ${esPalindromo(texto2)}');
+  print('${texto3} es palindromo: ${esPalindromo(texto3)}');
+}
